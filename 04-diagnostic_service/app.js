@@ -37,6 +37,6 @@ app.get('/diagnostics', (req, res) => {
   res.status(200).json(checkDiagnosticService);
 });
 
-app.listen(5005, () => {
+app.listen(5004, () => {
   console.log('Jarvis Service listening on port 5005');
 });

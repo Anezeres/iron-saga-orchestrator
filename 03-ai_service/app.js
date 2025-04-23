@@ -55,6 +55,6 @@ function timeOfDay() {
   return hour < 12 ? "morning" : hour < 18 ? "afternoon" : "evening";
 }
 
-app.listen(5006, () => {
+app.listen(5003, () => {
   console.log('AI Service running on port 5006 | J.A.R.V.I.S. awaiting...');
 });
