@@ -13,6 +13,7 @@ Implementar un sistema distribuido que simule el proceso de activación del traj
 | Persistencia     | In-memory (arrays)   |
 
 ## 🏗 Arquitectura
+```mermaid
 graph TD
     A[Orquestador] --> B[Core Service]
     A --> C[Helmet Service]
