@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helmet-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: helmet
+  template:
+    metadata:
+      labels:
+        app: helmet
+    spec:
+      containers:
+      - name: helmet
+        image: helmet-service:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5005
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: helmet-service
+spec:
+  selector:
+    app: helmet
+  ports:
+    - protocol: TCP
+      port: 5005
+      targetPort: 5005
+  type: ClusterIP

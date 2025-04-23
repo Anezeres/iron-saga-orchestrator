@@ -56,5 +56,5 @@ function timeOfDay() {
 }
 
 app.listen(5003, () => {
-  console.log('AI Service running on port 5006 | J.A.R.V.I.S. awaiting...');
+  console.log('AI Service running on port 5003 | J.A.R.V.I.S. awaiting...');
 });

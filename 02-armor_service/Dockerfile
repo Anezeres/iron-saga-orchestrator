@@ -11,7 +11,7 @@ COPY . .
 RUN pip install flask
 
 # Expón el puerto en el que tu app corre
-EXPOSE 5001
+EXPOSE 5002
 
 # Comando para ejecutar la aplicación
 CMD ["python", "app.py"]

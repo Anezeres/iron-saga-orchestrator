@@ -14,7 +14,7 @@ RUN npm install --production
 COPY . .
 
 # Expone el puerto del microservicio
-EXPOSE 5006
+EXPOSE 5003
 
 # Comando para iniciar el servicio
 CMD ["npm", "start"]

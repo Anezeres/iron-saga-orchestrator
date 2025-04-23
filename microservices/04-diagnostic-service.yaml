@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: diagnostic-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: diagnostic-service
+  template:
+    metadata:
+      labels:
+        app: diagnostic-service
+    spec:
+      containers:
+        - name: diagnostic-service
+          image: diagnostic-service:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5004
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: diagnostic-service
+spec:
+  selector:
+    app: diagnostic-service
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 5004
+      targetPort: 5004
