@@ -12,15 +12,6 @@ Implementar un sistema distribuido que simule el proceso de activación del traj
 | Contenedores     | Docker + Compose     |
 | Persistencia     | In-memory (arrays)   |
 
-## 🏗 Arquitectura
-```mermaid
-graph TD
-    A[Orquestador] --> B[Core Service]
-    A --> C[Helmet Service]
-    A --> D[Armor Service]
-    A --> E[Weapon Service]
-    A --> F[Diagnostic Service]
-    A --> G[AI Service]
 
 ## 🔄 Flujo de la Saga
 - Activación del reactor ARC (core_service)
